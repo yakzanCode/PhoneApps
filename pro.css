@@ -1,0 +1,214 @@
+body {
+    display: flex;
+}
+
+.proj {
+    display: inline-flex;
+}
+
+#iphone {
+    background-image: url("Home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 50%;
+    height: 743.5px;
+    width: 378px;
+}
+
+.apps,
+#bottom>div {
+    cursor: url('hand.png'), auto;
+}
+
+#Screen {
+    background-image: url("wallpaper.iphone.jpg");
+    /* background-image: url("blue.sky.jpg"); */
+    background-size: cover;
+    border-color: black;
+    border: 9.8px solid;
+    margin-left: -49.86%;
+    border-radius: 40px;
+    margin-top: 18px;
+    width: 318.5px;
+    height: 690px;
+}
+
+#top {
+    color: aliceblue;
+}
+
+#top>h1 {
+    margin: 35px 0px 0px 85px;
+    font-family: 'Arial';
+    font-weight: normal;
+    font-size: 35px;
+}
+
+#top>h2 {
+    margin: -10px 0px 0px 100px;
+    font-family: 'Arial';
+    font-weight: 100;
+    font-size: 100px;
+}
+
+#top>p {
+    margin: -10px 0px 0px 100px;
+    font-family: 'Arial';
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#mid {
+    border: 1px solid transparent;
+    background-color: #65b4f7;
+    margin: 60px 0px 0px 8px;
+    border-radius: 14px;
+    height: 170px;
+    width: 300px;
+}
+
+#mid>p {
+    margin: 7px 0px 0px 13px;
+    font-family: 'Arial';
+    color: white;
+}
+
+hr {
+    background-color: rgb(131, 196, 216);
+
+    border: 1px solid transparent;
+    height: 0.3px;
+    width: 285px;
+}
+
+input {
+    background-color: rgb(234, 245, 255);
+    border: 1px solid transparent;
+}
+
+#Up {
+    display: inline-flex;
+    margin-top: 9.4px;
+    height: 17px;
+}
+
+.Time {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 27px;
+    font-size: 14px;
+    margin-top: 0px;
+    color: white;
+}
+
+#notify {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid black;
+    background-color: black;
+    margin: -10px 0px 0px 14px;
+    width: 175px;
+    height: 23px;
+}
+
+#sgnl {
+    margin-left: 5px;
+}
+
+.apps {
+    margin: 33px 0px -5px 23px;
+    background-size: contain;
+    display: inline-block;
+    border-radius: 11px;
+    height: 49px;
+    width: 49px;
+}
+
+#Mail {
+    background-image: url("Mail.png");
+
+}
+
+#Photos {
+    background-image: url("photos.jpg");
+}
+
+#Clockk {
+    background-image: url("clock1.jpg");
+}
+
+#Notes {
+    background-image: url("Notes.png");
+}
+
+#Camera {
+    background-image: url("camera.jpeg");
+}
+
+#Calendar {
+    background-color: white;
+    align-items: center;
+}
+
+#day {
+    margin: 5.5px 0px 0px 11px;
+    font-family: sans-serif;
+    font-size: 9.5px;
+    color: red;
+}
+
+#daynm {
+    margin: -4px 0px 0px 17px;
+    font-family: cursive;
+    font-weight: 300;
+    font-size: 23px;
+}
+
+#Files {
+    background-image: url("Files.jpg");
+}
+
+#Music {
+    background-image: url("Music.png");
+}
+
+#weather {
+    background-image: url("weather.app.icon.png");
+}
+
+#bottom {
+    background-color: rgba(247, 237, 237, 0.441);
+    margin: 335px 0px 0px 9px;
+    border-radius: 23px;
+    width: 300px;
+    height: 80px;
+}
+
+.bApps div {
+    margin: 14px 0px 0px 14px;
+    background-size: contain;
+    display: inline-block;
+    border-radius: 11px;
+    height: 49px;
+    width: 49px;
+}
+
+#call {
+    background-image: url("Phone.jpg");
+    margin: 14px 0px 0px 14px;
+}
+
+#messages {
+    background-image: url("messages.png");
+    margin: 14px 0px 0px 19px;
+}
+
+#settings {
+    background-image: url("settings.png");
+    margin: 14px 0px 0px 19px;
+}
+
+#safari {
+    background-image: url("safari.png");
+    margin: 14px 0px 0px 19px;
+}
