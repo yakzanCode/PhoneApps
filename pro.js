@@ -1,7 +1,8 @@
 const screen = document.getElementById("Screen");
 const wApp = document.getElementById('weather');
-let apps = document.getElementById("Apps");
+let Apps = document.getElementById("Apps");
 const bottom = document.getElementById("bottom");
+const apps = document.getElementsByClassName("apps");
 
 function showTime() {
     var date = new Date();
@@ -18,44 +19,58 @@ function showTime() {
     min = (min < 10) ? "0" + min : min;
 
     var time = hrs + ":" + min;
-    document.getElementById("Time").innerHTML = time;
     document.getElementById("Time").textContent = time;
+    document.getElementById("Time").innerHTML = time;
     setTimeout(showTime, 1000);
 }
 
 function Calendar() {
+    var day = new Date().toLocaleDateString('en-us', { weekday: "long" });
     var nm = new Date().toLocaleDateString('en-us', { day: "numeric" });
     document.getElementById("daynm").innerHTML = nm;
-    var day = new Date().toLocaleDateString('en-us', { weekday: "long" });
     document.getElementById("day").innerHTML = day;
 }
 showTime();
 Calendar();
-function hideApps() {
-    screen.style.backgroundImage = "url(blue.sky.jpg)";
-    apps.style.display = "none";
+function hideApps(A) {
+    screen.style.backgroundImage = A;
     bottom.style.display = "none";
+    Apps.style.display = "none";
 }
-function openWeather() {
+wApp.addEventListener('click', function () {
+    hideApps("url(bluesky.jpg)");
+    openWeatherApp();
+});
+function openWeatherApp() {
     var g = document.createElement('div');
     g.setAttribute("id", "weatherr");
     var top = document.createElement('div');
     top.setAttribute("id", "top");
     g.appendChild(top);
-    top.innerHTML = `<h1>Cupertino</h1> <h2>24°</h2> <p>Mostly Sunny</p>`;
+    top.innerHTML = `<h1 id="city">Cupertino</h1> <h2 id="temp">24°</h2> <p id="condition">Mostly Sunny</p>`;
     var mid = document.createElement('div');
     mid.setAttribute("id", "mid");
-    mid.innerHTML = `<p>Sunny conditions will continue all day. Wind gusts are to 7 mph.</p> <hr> `;
+    mid.innerHTML = `<p id="gust"></p> <hr> `;
     g.appendChild(mid);
+    var form = document.createElement('form');
+    form.setAttribute("id", "form");
+    form.innerHTML = `<img id="srch" src="search.png"> <input type="text" name="name" id="search" placeholder="Search City">
+    <input type="submit" value="submit" style="cursor: pointer;">`
+    g.appendChild(form);
     screen.appendChild(g);
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        city = document.getElementById('search').value
+        fetch(`http://api.weatherapi.com/v1/current.json?key=18a47436dfd9470c89a91145231001&q=${city}&aqi=no`)
+            .then(response => response.json())
+            //   .then(json => console.log(json.current.temp_c))
+            //   .then(json => console.log(json.current.condition.text))
+            .then(json => {
+                document.getElementById('city').innerHTML = json.location.name
+                document.getElementById('condition').innerHTML = json.current.condition.text
+                document.getElementById('temp').innerHTML = json.current.temp_c
+                document.getElementById('gust').innerHTML ='Wind gusts are to '+ json.current.gust_mph + ' .'
+            })
+    }
+    )
 }
-wApp.addEventListener('click', function () {
-    hideApps();
-    openWeather();
-});
-// hideApps();
-// openWeather();
-// function commingSoon() {
-
-// }
-

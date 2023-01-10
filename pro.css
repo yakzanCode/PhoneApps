@@ -212,3 +212,17 @@ input {
     background-image: url("safari.png");
     margin: 14px 0px 0px 19px;
 }
+
+#srch{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    display: inline-block;
+    margin: 8px 0px 0px 208px;
+}
+#search{
+    width: 200px;
+    height: 20px;
+    margin: 5px 0px 0px 20px;
+    border-radius: 3px;
+}
