@@ -47,7 +47,7 @@ function openWeatherApp() {
     var top = document.createElement('div');
     top.setAttribute("id", "top");
     g.appendChild(top);
-    top.innerHTML = `<h1 id="city">Cupertino</h1> <h2 id="temp">24°</h2> <p id="condition">Mostly Sunny</p>`;
+    top.innerHTML = `<h1 id="city">Berlin</h1> <h2 id="temp">14°</h2> <p id="condition">Mostly Sunny</p>`;
     var mid = document.createElement('div');
     mid.setAttribute("id", "mid");
     mid.innerHTML = `<p id="gust"></p> <hr> `;
@@ -63,13 +63,12 @@ function openWeatherApp() {
         city = document.getElementById('search').value
         fetch(`http://api.weatherapi.com/v1/current.json?key=18a47436dfd9470c89a91145231001&q=${city}&aqi=no`)
             .then(response => response.json())
-            //   .then(json => console.log(json.current.temp_c))
-            //   .then(json => console.log(json.current.condition.text))
             .then(json => {
                 document.getElementById('city').innerHTML = json.location.name
                 document.getElementById('condition').innerHTML = json.current.condition.text
                 document.getElementById('temp').innerHTML = json.current.temp_c
                 document.getElementById('gust').innerHTML ='Wind gusts are to '+ json.current.gust_mph + ' .'
+                document.getElementById('search').value = ' '
             })
     }
     )
