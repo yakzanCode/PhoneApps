@@ -7,7 +7,7 @@ body {
 }
 
 #iphone {
-    background-image: url("Home.png");
+    background-image: url("./asets/Home.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,11 +18,11 @@ body {
 
 .apps,
 #bottom>div {
-    cursor: url('hand.png'), auto;
+    cursor: url('./asets/hand.png'), auto;
 }
 
 #Screen {
-    background-image: url("wallpaper.iphone.jpg");
+    background-image: url("./asets/wallpaper.iphone.jpg");
     /* background-image: url("blue.sky.jpg"); */
     background-size: cover;
     border-color: black;
@@ -125,24 +125,24 @@ input {
 }
 
 #Mail {
-    background-image: url("Mail.png");
+    background-image: url("./asets/Mail.png");
 
 }
 
 #Photos {
-    background-image: url("photos.jpg");
+    background-image: url("./asets/photos.jpg");
 }
 
 #Clockk {
-    background-image: url("clock1.jpg");
+    background-image: url("./asets/clock1.jpg");
 }
 
 #Notes {
-    background-image: url("Notes.png");
+    background-image: url("./asets/Notes.png");
 }
 
 #Camera {
-    background-image: url("camera.jpeg");
+    background-image: url("./asets/camera.jpeg");
 }
 
 #Calendar {
@@ -165,15 +165,15 @@ input {
 }
 
 #Files {
-    background-image: url("Files.jpg");
+    background-image: url("./asets/Files.jpg");
 }
 
 #Music {
-    background-image: url("Music.png");
+    background-image: url("./asets/Music.png");
 }
 
 #weather {
-    background-image: url("weather.app.icon.png");
+    background-image: url("./asets/weather.app.icon.png");
 }
 
 #bottom {
@@ -194,22 +194,22 @@ input {
 }
 
 #call {
-    background-image: url("Phone.jpg");
+    background-image: url("./asets/Phone.jpg");
     margin: 14px 0px 0px 14px;
 }
 
 #messages {
-    background-image: url("messages.png");
+    background-image: url("./asets/messages.png");
     margin: 14px 0px 0px 19px;
 }
 
 #settings {
-    background-image: url("settings.png");
+    background-image: url("./asets/settings.png");
     margin: 14px 0px 0px 19px;
 }
 
 #safari {
-    background-image: url("safari.png");
+    background-image: url("./asets/safari.png");
     margin: 14px 0px 0px 19px;
 }
 

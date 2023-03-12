@@ -1,8 +1,8 @@
+const apps = document.getElementsByClassName("apps");
+const bottom = document.getElementById("bottom");
 const screen = document.getElementById("Screen");
 const wApp = document.getElementById('weather');
 let Apps = document.getElementById("Apps");
-const bottom = document.getElementById("bottom");
-const apps = document.getElementsByClassName("apps");
 
 function showTime() {
     var date = new Date();
@@ -38,7 +38,7 @@ function hideApps(A) {
     Apps.style.display = "none";
 }
 wApp.addEventListener('click', function () {
-    hideApps("url(bluesky.jpg)");
+    hideApps("url(./asets/bluesky.jpg)");
     openWeatherApp();
 });
 function openWeatherApp() {
@@ -54,7 +54,7 @@ function openWeatherApp() {
     g.appendChild(mid);
     var form = document.createElement('form');
     form.setAttribute("id", "form");
-    form.innerHTML = `<img id="srch" src="search.png"> <input type="text" name="name" id="search" placeholder="Search City">
+    form.innerHTML = `<img id="srch" src="./asets/search.png"> <input type="text" name="name" id="search" placeholder="Search City">
     <input type="submit" value="submit" style="cursor: pointer;">`
     g.appendChild(form);
     screen.appendChild(g);
@@ -67,7 +67,7 @@ function openWeatherApp() {
                 document.getElementById('city').innerHTML = json.location.name
                 document.getElementById('condition').innerHTML = json.current.condition.text
                 document.getElementById('temp').innerHTML = json.current.temp_c
-                document.getElementById('gust').innerHTML ='Wind gusts are to '+ json.current.gust_mph + ' .'
+                document.getElementById('gust').innerHTML = 'Wind gusts are to ' + json.current.gust_mph + ' .'
                 document.getElementById('search').value = ' '
             })
     }
