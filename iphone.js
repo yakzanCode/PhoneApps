@@ -38,7 +38,7 @@ function hideApps(A) {
     Apps.style.display = "none";
 }
 wApp.addEventListener('click', function () {
-    hideApps("url(./asets/bluesky.jpg)");
+    hideApps("url(./assets/bluesky.jpg)");
     openWeatherApp();
 });
 function openWeatherApp() {
@@ -54,7 +54,7 @@ function openWeatherApp() {
     g.appendChild(mid);
     var form = document.createElement('form');
     form.setAttribute("id", "form");
-    form.innerHTML = `<img id="srch" src="./asets/search.png"> <input type="text" name="name" id="search" placeholder="Search City">
+    form.innerHTML = `<img id="srch" src="./assets/search.png"> <input type="text" name="name" id="search" placeholder="Search City">
     <input type="submit" value="submit" style="cursor: pointer;">`
     g.appendChild(form);
     screen.appendChild(g);
